@@ -1,5 +1,5 @@
 export const MainLayout = () => {
-  return <div>MainLayout</div>
-}
+  return <div>MainLayout</div>;
+};
 
-export default MainLayout
+export default MainLayout;
