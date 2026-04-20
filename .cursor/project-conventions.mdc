@@ -1,0 +1,27 @@
+---
+description: Global project rules: folder structure and tech stack
+globs: **/*
+alwaysApply: true
+---
+
+# Project Conventions
+
+- **Tech Stack:** React, TypeScript, Ant Design, pnpm.
+- **Core Principles:** Keep code simple (KISS), readable, and maintainable. Avoid duplication (DRY) and unnecessary abstractions.
+- **TypeScript Baseline:** Use `type` (not `interface`) and avoid `any`.
+- **Component Definition:** Use arrow functions only. Do not use `React.FC` or `function ComponentName() {}`.
+- **Props Placement:** Store component props in `types.ts` inside the same component folder.
+- **Component Folder Structure:** Each reusable component folder must contain:
+  - `index.tsx` (main component)
+  - `types.ts` (component types)
+  - `styles.module.css` (CSS Modules styles)
+  - `const.ts` (local constants)
+  - `utils.ts` (local helpers)
+- **Hooks Placement:**
+  - Global reusable hooks go to `src/hooks`.
+  - Page-specific hooks stay inside the corresponding page folder.
+- **Component Placement:**
+  - `src/components/layouts` for page skeletons (for example: `MainLayout` with header/content/footer zones).
+  - `src/components/shared` for small reusable atoms (for example: buttons, badges, form atoms).
+  - `src/components/features` for larger semantic blocks (for example: header, footer, contact form).
+  - `src/pages/[PageName]/components` for components used only by a single page.
