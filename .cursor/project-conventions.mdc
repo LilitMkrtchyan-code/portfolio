@@ -6,20 +6,30 @@ alwaysApply: true
 
 # Project Conventions
 
-- **Tech Stack:** React, TypeScript, Ant Design, pnpm.
-- **Core Principles:** Keep code simple (KISS), readable, and maintainable. Avoid duplication (DRY) and unnecessary abstractions.
-- **TypeScript Baseline:** Use `type` (not `interface`) and avoid `any`.
-- **Component Definition:** Use arrow functions only. Do not use `React.FC` or `function ComponentName() {}`.
-- **Props Placement:** Store component props in `types.ts` inside the same component folder.
-- **Component Folder Structure:** Each reusable component folder must contain:
-  - `index.tsx` (main component)
-  - `types.ts` (component types)
-  - `styles.module.css` (CSS Modules styles)
-  - `consts.ts` (local constants)
-  - `utils.ts` (local helpers)
+- **Tech Stack:**
+  - React, TypeScript, Ant Design, pnpm.
+
+- **Core Principles:**
+  - Keep code simple (KISS), readable, and maintainable. Avoid duplication (DRY) and unnecessary abstractions.
+
+- **Cross-file rules:**
+  - Component/TypeScript specifics live in `component-patterns.mdc`.
+  - Styling specifics live in `css-guidelines.mdc`.
+
+- **Component Folder Structure:**
+  - Reusable components should be self-contained and predictable.
+  - Prefer having:
+    - `index.tsx` (main component)
+    - `types.ts` (component types)
+    - `styles.module.css` (CSS Modules styles)
+  - Add only when needed:
+    - `consts.ts` (local constants)
+    - `utils.ts` (local helpers)
+
 - **Hooks Placement:**
   - Global reusable hooks go to `src/hooks`.
   - Page-specific hooks stay inside the corresponding page folder.
+
 - **Component Placement:**
   - `src/components/layouts` for page skeletons (for example: `MainLayout` with header/content/footer zones).
   - `src/components/shared` for small reusable atoms (for example: buttons, badges, form atoms).

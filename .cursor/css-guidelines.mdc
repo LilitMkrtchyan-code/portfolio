@@ -6,16 +6,27 @@ alwaysApply: true
 
 # CSS Guidelines
 
-- **Responsiveness:** UI must work on Mobile, Tablet, and Desktop. Use media queries where needed.
-- **Units:** `px` is acceptable for fixed values (borders, paddings, icon sizes). Prefer relative or layout-driven units for containers and responsive blocks.
-- **Styling Method:** Use CSS Modules (`styles.module.css`) for component-level styles.
+- **Responsiveness:**
+  - UI must work on Mobile, Tablet, and Desktop. Use media queries where needed.
+
+- **Units:**
+  - `px` is acceptable for fixed values (borders, paddings, icon sizes). Prefer relative or layout-driven units for containers and responsive blocks.
+
+- **Styling Method:**
+  - Use CSS Modules (`styles.module.css`) for component-level styles.
+
 - **Ant Design Priority:**
   - First prefer Ant Design APIs (component props, `ConfigProvider`, theme tokens).
   - If additional styling is needed, use CSS Modules.
   - Use pure HTML + CSS Modules when Ant Design implementation becomes unnecessarily complex for the target design.
+
 - **Specificity Rules:**
   - Avoid `!important`.
   - For overrides, increase specificity with scoped parent selectors.
   - Use `!important` only as a last resort.
-- **Layout Helpers:** Ant Design Grid (`Row`, `Col`) is recommended for fast responsive layouts when appropriate.
-- **Inline Styles:** Avoid inline styles (`style={{...}}`). Allow them only for truly dynamic runtime values or when Ant Design logic strictly requires it.
+
+- **Layout Helpers:**
+  - Ant Design Grid (`Row`, `Col`) is recommended for fast responsive layouts when appropriate.
+
+- **Inline Styles:**
+  - Avoid inline styles (`style={{...}}`). Allow them only for truly dynamic runtime values or when Ant Design logic strictly requires it.
