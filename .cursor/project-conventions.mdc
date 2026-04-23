@@ -15,7 +15,7 @@ alwaysApply: true
   - `index.tsx` (main component)
   - `types.ts` (component types)
   - `styles.module.css` (CSS Modules styles)
-  - `const.ts` (local constants)
+  - `consts.ts` (local constants)
   - `utils.ts` (local helpers)
 - **Hooks Placement:**
   - Global reusable hooks go to `src/hooks`.
