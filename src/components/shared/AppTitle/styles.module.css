@@ -1,0 +1,8 @@
+.sectionTitle {
+  font-family: var(--font-alt);
+  font-size: var(--fs-display);
+  font-weight: 400;
+  line-height: var(--lh-none);
+  letter-spacing: var(--ls-tight-max);
+  color: var(--color-text-primary);
+}

@@ -11,7 +11,6 @@
   font-weight: 700;
   letter-spacing: 0;
   line-height: var(--lh-relaxed);
-  text-transform: uppercase;
   cursor: pointer;
   transition: all var(--t-base) var(--ease-gentle);
 }

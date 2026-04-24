@@ -1,6 +1,7 @@
 import { NavLink } from 'react-router-dom';
+import { FULL_NAME } from '../../../consts';
+import { HEADER_LINKS } from './consts';
 import BaseButton from '../../shared/BaseButton';
-import { HEADER_CTA_LABEL, HEADER_LINKS, LOGO_TEXT } from './consts';
 import { getHeaderLinkClassName } from './utils';
 import styles from './styles.module.css';
 
@@ -9,7 +10,7 @@ export const Header = () => {
     <header className={styles.header}>
       <div className={styles.headerContent}>
         <NavLink to="/" className={styles.logo}>
-          {LOGO_TEXT}
+          {FULL_NAME}
         </NavLink>
         <nav className={styles.nav} aria-label="Main navigation">
           {HEADER_LINKS.map(item => (
@@ -25,7 +26,7 @@ export const Header = () => {
           ))}
         </nav>
         <BaseButton variant="primary" className={styles.headerCta}>
-          {HEADER_CTA_LABEL}
+          LET'S TALK
         </BaseButton>
       </div>
     </header>

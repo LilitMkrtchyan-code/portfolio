@@ -1,4 +1,4 @@
-export type FooterLink = {
+export type SocialLink = {
   label: string;
   href: string;
 };
