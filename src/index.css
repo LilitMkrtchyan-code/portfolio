@@ -41,10 +41,15 @@
   --color-accent: #ffb68b;
   --color-accent-strong: #f69251;
 
-  --color-overlay-soft: #55433926;
+  --color-overlay-soft: #554339;
   --color-border-soft: #17151e;
+  --color-indicator-success: #4ade80;
+
+  --color-accent-glow: rgba(255, 182, 139, 0.14);
+  --color-surface-glass: rgb(54 51 61 / 0.9);
 
   --ease-gentle: cubic-bezier(0.4, 0, 0.2, 1);
+  --ease-visual: cubic-bezier(0.22, 1, 0.36, 1);
 
   --t-reveal: 1.4s;
   --t-fast: 0.2s;
@@ -58,7 +63,8 @@
   --radius-md: 8px;
   --radius-lg: 12px;
   --radius-xl: 20px;
-  --radius-2xl: 32px;
+  --radius-2xl: 24px;
+  --radius-3xl: 32px;
 
   --space-1: 0.25rem;
   --space-2: 0.5rem;
@@ -86,6 +92,12 @@
   padding: 0;
 }
 
+html {
+  font-size: 100%;
+  -webkit-text-size-adjust: 100%;
+  scroll-behavior: smooth;
+}
+
 html,
 body,
 #root {
@@ -95,7 +107,7 @@ body,
 body {
   font-family: var(--font-primary);
   font-size: var(--fs-base);
-  line-height: 1.5;
+  line-height: var(--lh-relaxed);
   background-color: var(--color-bg-main);
   color: var(--color-text-primary);
   text-rendering: optimizeLegibility;
@@ -131,4 +143,16 @@ button {
 
 a {
   text-decoration: none;
+}
+
+@media (max-width: 768px) {
+  html {
+    font-size: 90%;
+  }
+}
+
+@media (max-width: 480px) {
+  html {
+    font-size: 85%;
+  }
 }
