@@ -1,0 +1,49 @@
+.card {
+  background-color: var(--color-bg-main);
+  padding: var(--space-10);
+  border-radius: 16px;
+  border: 1px solid transparent;
+  transition:
+    border-color var(--t-base) var(--ease-visual),
+    background-color var(--t-base) var(--ease-visual);
+}
+
+.card:hover {
+  background-color: var(--color-bg-light);
+  border: 1px solid var(--color-overlay-soft);
+}
+
+.iconBox {
+  width: 48px;
+  height: 48px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: var(--color-accent-subtle);
+  border-radius: var(--radius-md);
+  margin-bottom: var(--space-12);
+  border: 1px solid var(--color-accent-subtle);
+}
+
+.icon {
+  color: var(--color-accent);
+}
+
+.cardTitle {
+  font-family: var(--font-alt);
+  font-size: var(--fs-lg);
+  font-weight: 700;
+  line-height: var(--lh-nav);
+  letter-spacing: var(--ls-tight-sm);
+  margin-bottom: var(--space-4);
+  color: var(--color-text-primary);
+}
+
+.cardDescription {
+  font-family: var(--font-primary);
+  font-size: var(--fs-base);
+  font-weight: 400;
+  line-height: var(--lh-relaxed);
+  letter-spacing: var(--ls-md);
+  color: var(--color-text-secondary);
+}

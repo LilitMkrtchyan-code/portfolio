@@ -1,6 +1,6 @@
 import ProfileImage from '../../../../components/shared/ProfileImage';
 import { HERO_IMAGE_URL } from '../../../../consts';
-import AppTitle from '../../../../components/shared/AppTitle';
+import Heading from '../../../../components/shared/Heading';
 import { VIRTUAL_SELF_DESCRIPTION } from './consts';
 import BaseButton from '../../../../components/shared/BaseButton';
 import { Zap } from 'lucide-react';
@@ -27,14 +27,13 @@ const VirtualSelfSection = () => {
           </div>
 
           <div className={styles.content}>
-            <span className={styles.subtitle}>Intelligence</span>
-
-            <AppTitle as="h2" variant="sectionTitle" className={styles.title}>
+            <Heading as="span" variant="subtitle" className={styles.subtitle}>
+              Intelligence
+            </Heading>
+            <Heading as="h2" variant="sectionTitle" className={styles.title}>
               Meet My Virtual Self
-            </AppTitle>
-
+            </Heading>
             <p className={styles.description}>{VIRTUAL_SELF_DESCRIPTION}</p>
-
             <div className={styles.languageRow}>
               <div className={styles.waveIcon}>
                 <span />

@@ -1,0 +1,19 @@
+.sectionTitle {
+  font-family: var(--font-alt);
+  font-size: var(--fs-display);
+  font-weight: 600;
+  line-height: var(--lh-none);
+  letter-spacing: var(--ls-tight-max);
+  color: var(--color-text-primary);
+}
+
+.subtitle {
+  display: block;
+  font-family: var(--font-accent);
+  font-size: var(--fs-sm);
+  letter-spacing: 0.3em;
+  line-height: var(--lh-nav);
+  font-weight: 700;
+  color: var(--color-accent);
+  text-transform: uppercase;
+}

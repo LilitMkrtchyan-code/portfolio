@@ -1,4 +1,4 @@
-import AppTitle from '../../../../components/shared/AppTitle';
+import Heading from '../../../../components/shared/Heading';
 import BaseButton from '../../../../components/shared/BaseButton';
 import ProfileImage from '../../../../components/shared/ProfileImage';
 import { CV_PATH, FULL_NAME, HERO_IMAGE_URL, JOB_TITLE } from '../../../../consts';
@@ -15,9 +15,9 @@ export const HeroSection = () => {
               <span className={styles.line} />
               <span className={styles.name}>{FULL_NAME}</span>
             </div>
-            <AppTitle as="h1" variant="sectionTitle" className={styles.title}>
+            <Heading as="h1" variant="sectionTitle" className={styles.title}>
               {JOB_TITLE}
-            </AppTitle>
+            </Heading>
             <p className={styles.description}>{HERO_DESCRIPTION}</p>
             <div className={styles.actions}>
               <a href={CV_PATH} download className={styles.cvButton}>

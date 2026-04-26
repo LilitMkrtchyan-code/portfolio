@@ -43,9 +43,13 @@
 
   --color-overlay-soft: #554339;
   --color-border-soft: #17151e;
+  --color-border-muted: #48454d;
   --color-indicator-success: #4ade80;
 
+  --color-accent-subtle: rgba(255, 182, 139, 0.05);
   --color-accent-glow: rgba(255, 182, 139, 0.14);
+
+  --color-surface-ghost: rgb(54 51 61 / 0.3);
   --color-surface-glass: rgb(54 51 61 / 0.9);
 
   --ease-gentle: cubic-bezier(0.4, 0, 0.2, 1);
@@ -76,6 +80,7 @@
   --space-8: 2rem;
   --space-10: 2.5rem;
   --space-12: 3rem;
+  --space-13: 5rem;
   --space-section: 8rem;
 
   --op-xs: 0.1;
