@@ -1,0 +1,82 @@
+.techStack {
+  position: relative;
+  width: 100%;
+  background-color: var(--color-bg-main);
+  padding: var(--space-13) 0;
+  overflow: hidden;
+}
+
+.inner {
+  padding: var(--space-8) 0;
+  background-color: transparent;
+  overflow: hidden;
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+}
+
+.marquee {
+  user-select: none;
+  -webkit-mask-image: linear-gradient(
+    to right,
+    transparent,
+    var(--color-black) 15%,
+    var(--color-black) 85%,
+    transparent
+  );
+  mask-image: linear-gradient(
+    to right,
+    transparent,
+    var(--color-black) 15%,
+    var(--color-black) 85%,
+    transparent
+  );
+}
+
+@keyframes scroll {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(-50%);
+  }
+}
+
+.track {
+  display: flex;
+  width: max-content;
+  animation: scroll 35s linear infinite;
+  animation-play-state: running;
+  will-change: transform;
+}
+
+.content {
+  display: flex;
+  flex-shrink: 0;
+  gap: 10rem;
+  padding-right: 10rem;
+}
+
+.item {
+  display: flex;
+  align-items: center;
+  gap: var(--space-2);
+}
+
+.icon {
+  color: var(--color-accent);
+  opacity: 0.9;
+}
+
+.name {
+  font-family: var(--font-alt);
+  font-size: var(--fs-md);
+  font-weight: 500;
+  line-height: var(--lh-relaxed);
+  color: var(--color-text-primary);
+  letter-spacing: var(--ls-tight-sm);
+  white-space: nowrap;
+}
+
+.marquee:hover .track {
+  animation-play-state: paused;
+}

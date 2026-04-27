@@ -5,7 +5,7 @@ import { CV_PATH, FULL_NAME, HERO_IMAGE_URL, JOB_TITLE } from '../../../../const
 import { HERO_DESCRIPTION, HERO_TAGS } from './consts';
 import styles from './styles.module.css';
 
-export const HeroSection = () => {
+const HeroSection = () => {
   return (
     <section className={styles.hero}>
       <div className="container">
@@ -49,3 +49,5 @@ export const HeroSection = () => {
     </section>
   );
 };
+
+export default HeroSection;
