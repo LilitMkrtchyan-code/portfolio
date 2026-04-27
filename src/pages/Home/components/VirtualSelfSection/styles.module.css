@@ -133,7 +133,7 @@
 }
 
 .description {
-  font-family: var(-font-primary);
+  font-family: var(--font-primary);
   font-size: var(--fs-md);
   line-height: var(--lh-loose);
   letter-spacing: 0;
