@@ -1,0 +1,36 @@
+---
+description: Rules for writing React components and typing
+globs: **/*.{ts,tsx}
+alwaysApply: true
+---
+
+# Component Patterns
+
+- **Component Style:**
+  - Use arrow functions only:
+  - With props: `const Component = ({ prop }: ComponentProps) => { ... }`
+  - Without props: `const Component = () => { ... }`
+  - Do not use `React.FC` or `function Name() {}`.
+
+- **Typing Rules:**
+  - Do not use `any`.
+  - Use `type` instead of `interface`.
+  - Keep component props in a separate `types.ts` file in the same component folder.
+
+- **Linting and Safety:**
+  - Do not use `eslint-disable`.
+  - Do not use `@ts-ignore`.
+  - Ensure code passes TypeScript checks and lint rules.
+
+- **Ant Design Usage:**
+  - Prefer Ant Design components for UI consistency.
+  - If a solution becomes significantly more complex with Ant Design, use semantic HTML + CSS Modules.
+
+- **Split a component when:**
+  - Hard to describe what it does in one sentence.
+  - It mixes UI rendering with business logic.
+  - It contains multiple independent UI blocks.
+  - It's hard to reuse without bringing unnecessary dependencies.
+
+- **Naming:**
+  - Use clear, descriptive names for components, variables, and utility functions.
