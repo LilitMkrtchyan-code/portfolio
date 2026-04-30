@@ -73,7 +73,7 @@
   font-weight: 500;
   line-height: var(--lh-relaxed);
   color: var(--color-text-primary);
-  letter-spacing: var(--ls-tight-sm);
+  letter-spacing: var(--ls-normal);
   white-space: nowrap;
 }
 

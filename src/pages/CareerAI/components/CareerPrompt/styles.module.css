@@ -1,0 +1,116 @@
+.careerPrompt {
+  background-color: var(--color-bg-elevated);
+  border: 1px solid #252129;
+  border-radius: var(--radius-lg);
+  padding: var(--space-8);
+  width: 100%;
+  max-width: 1000px;
+  margin: 0 auto;
+}
+
+.promptHeader {
+  display: flex;
+  align-items: center;
+  gap: var(--space-3);
+  padding-bottom: var(--space-4);
+  border-bottom: 1px solid #312b36;
+}
+
+.headerIcon {
+  background-color: var(--color-accent-subtle);
+  color: var(--color-accent);
+  padding: var(--space-2);
+  border-radius: var(--radius-sm);
+  display: flex;
+  align-items: center;
+}
+
+.headerTitle {
+  display: inline-block;
+  font-family: var(--font-accent);
+  font-size: var(--fs-sm);
+  font-weight: 400;
+  letter-spacing: var(--ls-normal);
+  line-height: var(--lh-nav);
+  color: var(--color-text-secondary);
+  text-transform: uppercase;
+}
+
+textarea {
+  background-color: #211e28 !important;
+}
+
+textarea.promptText {
+  padding: var(--space-6) 0;
+  color: var(--color-text-primary);
+  font-family: var(--font-primary);
+  font-size: var(--fs-md);
+  line-height: var(--lh-loose);
+  letter-spacing: var(--ls-normal);
+  background: transparent;
+  box-shadow: none;
+  resize: none;
+}
+
+.promptText::placeholder {
+  color: var(--color-text-secondary);
+  opacity: 0.2;
+}
+
+.promptFooter {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding-top: var(--space-6);
+}
+
+.buttonGroup {
+  display: flex;
+  gap: var(--space-4);
+}
+
+.btnGenerate,
+.btnClear {
+  padding: var(--space-2) var(--space-10);
+  border-radius: var(--radius-lg);
+}
+
+.btnGenerate:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+
+.btnClear {
+  font-weight: 400;
+}
+
+.metaInfo {
+  display: flex;
+  gap: var(--space-8);
+}
+
+.metaItem {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+}
+
+.metaLabel {
+  font-family: var(--font-accent);
+  font-size: 10px;
+  letter-spacing: var(--ls-normal);
+  line-height: var(--lh-relaxed);
+  color: var(--color-text-secondary);
+  opacity: var(--op-md);
+  text-transform: uppercase;
+}
+
+.metaValue {
+  font-family: var(--font-accent);
+  font-size: var(--fs-sm);
+  letter-spacing: var(--ls-normal);
+  line-height: var(--lh-nav);
+  color: var(--color-text-secondary);
+  font-weight: 700;
+  margin-top: 2px;
+}
