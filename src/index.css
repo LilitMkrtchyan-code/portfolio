@@ -33,6 +33,7 @@
   --color-bg-light: #2b2832;
   --color-bg-deep: #0f0d16;
   --color-bg-surface: #18161f;
+  --color-bg-elevated: #211e28;
 
   --color-text-primary: #e6e0ed;
   --color-text-secondary: #dbc1b4;
@@ -67,9 +68,10 @@
   --radius-sm: 6px;
   --radius-md: 8px;
   --radius-lg: 12px;
-  --radius-xl: 20px;
-  --radius-2xl: 24px;
-  --radius-3xl: 32px;
+  --radius-xl: 16px;
+  --radius-2xl: 20px;
+  --radius-3xl: 24px;
+  --radius-4xl: 32px;
 
   --space-1: 0.25rem;
   --space-2: 0.5rem;
@@ -89,6 +91,8 @@
   --op-md: 0.6;
   --op-lg: 0.8;
 }
+
+/*   background-color: #211e28 ; */
 
 *,
 *::before,
@@ -149,6 +153,47 @@ button {
 
 a {
   text-decoration: none;
+}
+
+.markdownContent {
+  color: var(--color-text-primary);
+  font-family: var(--font-primary);
+  font-size: var(--fs-md);
+  line-height: var(--lh-relaxed);
+}
+
+.markdownContent h1,
+.markdownContent h2 {
+  font-family: var(--font-alt);
+  color: var(--color-text-primary);
+  margin-top: var(--space-4);
+  margin-bottom: var(--space-2);
+}
+
+.markdownContent h3 {
+  font-family: var(--font-alt);
+  color: var(--color-text-primary);
+  margin-top: var(--space-6);
+}
+
+.markdownContent p {
+  margin-top: var(--space-3);
+}
+
+.markdownContent ul,
+ol {
+  padding-left: var(--space-6);
+  margin-top: var(--space-2);
+}
+
+.markdownContent li {
+  color: var(--color-text-primary);
+  margin-bottom: var(--space-2);
+}
+
+.markdownContent strong {
+  font-family: var(--font-accent);
+  color: var(--color-accent);
 }
 
 @media (max-width: 768px) {

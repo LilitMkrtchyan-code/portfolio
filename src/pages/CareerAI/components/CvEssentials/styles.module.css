@@ -1,0 +1,63 @@
+.cvEssentials {
+  background-color: var(--color-bg-elevated);
+  padding: var(--space-6);
+  border-radius: var(--radius-lg);
+  width: 100%;
+}
+
+.title {
+  color: var(--color-text-secondary);
+  margin-bottom: var(--space-6);
+  text-transform: uppercase;
+}
+
+.essentialsList {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-4);
+}
+
+.essentialItem {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #1d1a23;
+  border-radius: var(--radius-xs);
+  padding: var(--space-3);
+}
+
+.itemLabel {
+  font-family: var(--font-primary);
+  color: var(--color-text-primary);
+  font-size: 0.875rem;
+  font-weight: 400;
+  line-height: var(--lh-base);
+  letter-spacing: var(--ls-normal);
+}
+
+.itemStatus {
+  display: inline-block;
+  font-family: var(--font-accent);
+  font-size: var(--fs-sm);
+  letter-spacing: var(--ls-normal);
+  line-height: var(--lh-nav);
+  font-weight: 700;
+  color: var(--color-accent);
+  text-transform: uppercase;
+}
+
+.required {
+  color: var(--color-accent);
+}
+
+.missing {
+  color: var(--color-surface-glass);
+}
+
+.ready {
+  color: var(--color-indicator-success);
+}
+
+.optional {
+  color: var(--color-surface-glass);
+}

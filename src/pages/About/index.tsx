@@ -1,5 +1,19 @@
-const  About = () => {
-  return <div>About page</div>
-}
+import { cvContent } from '../../data/cvContent';
+import ReactMarkdown from 'react-markdown';
+import styles from './styles.module.css';
 
-export default About
+const About = () => {
+  return (
+    <div className={styles.about}>
+      <div className="container">
+        <div className={styles.cv}>
+          <div className="markdownContent">
+            <ReactMarkdown>{cvContent}</ReactMarkdown>
+          </div>
+        </div>
+      </div>
+    </div>
+  );
+};
+
+export default About;

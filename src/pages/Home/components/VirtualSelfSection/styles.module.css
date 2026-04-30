@@ -32,9 +32,9 @@
 .imageWrapper {
   position: relative;
   width: 100%;
-  max-width: 340px;
+  max-width: 360px;
   border: 1px solid var(--color-overlay-soft);
-  border-radius: var(--radius-2xl);
+  border-radius: var(--radius-3xl);
   background-color: var(--color-bg-light);
   z-index: 1;
   box-shadow: 0 0 60px 5px var(--color-accent-glow);
@@ -66,7 +66,7 @@
 .profileContainer {
   width: 100%;
   aspect-ratio: 1 / 1;
-  filter: grayscale(95%);
+  filter: grayscale(85%);
   transition: filter var(--t-smooth) var(--ease-visual);
 }
 

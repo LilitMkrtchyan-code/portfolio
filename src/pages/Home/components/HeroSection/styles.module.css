@@ -149,7 +149,7 @@
   margin-left: auto;
   padding: var(--space-2);
   border: 1px solid #2c2326;
-  border-radius: var(--radius-3xl);
+  border-radius: var(--radius-4xl);
   background-color: var(--color-bg-main);
 }
 

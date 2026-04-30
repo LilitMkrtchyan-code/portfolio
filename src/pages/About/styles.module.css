@@ -1,1 +1,7 @@
+.about {
+  padding: var(--space-section) 0;
+}
 
+.cv {
+  max-width: 800px;
+}

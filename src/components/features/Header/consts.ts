@@ -5,5 +5,6 @@ export const HEADER_LINKS: HeaderLink[] = [
   { label: 'Projects', to: '/projects' },
   { label: 'Process', to: '/process' },
   { label: 'About', to: '/about' },
+  { label: 'CareerAI', to: '/careerAI' },
   { label: 'Contact', to: '/contact' },
 ];
