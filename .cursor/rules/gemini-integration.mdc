@@ -1,0 +1,12 @@
+---
+description: Use Gemini integration skill when working with AI features or API calls
+globs: src/api/gemini/**/*.ts
+alwaysApply: false
+---
+
+# Gemini Rule
+
+- Follow the pattern in `src/api/gemini/index.ts`
+- Never hardcode API keys — use `src/api/gemini/config.ts`
+- Never call Gemini API directly from a component
+- Always handle `isLoading` and error states
