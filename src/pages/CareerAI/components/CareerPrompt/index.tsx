@@ -37,7 +37,7 @@ const CareerPrompt = ({ value, onChange, onGenerate, onClear, isLoading }: Caree
             className={styles.btnGenerate}
             disabled={isLoading}
           >
-            {isLoading ? 'Processing...' : 'Ask Gemini'}
+            {isLoading ? 'Processing' : 'Ask Career'}
           </BaseButton>
           <BaseButton variant="secondary" className={styles.btnClear} onClick={onClear}>
             Clear Space

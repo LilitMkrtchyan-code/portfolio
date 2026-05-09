@@ -22,7 +22,7 @@ export const generateGeminiContent = async (prompt: string): Promise<string> => 
       params: { key: API_KEY },
       headers: { 'Content-Type': 'application/json' },
     });
-    return response.data.candidates?.[0]?.content?.parts?.[0]?.text || '';
+    return response.data.candidates?.[0]?.content?.parts?.[0]?.text;
   } catch (error) {
     const axiosError = error as AxiosError<{ error: { message: string } }>;
     const errorMessage = axiosError.response?.data?.error?.message || 'Something went wrong';

@@ -1,5 +1,5 @@
 import { NavLink } from 'react-router-dom';
-import { LOGO_TEXT, SOCIAL_LINKS } from '../../../consts';
+import { FULL_NAME, LOGO_TEXT, SOCIAL_LINKS, AVAILABILITY_STATUS } from '../../../consts';
 import styles from './styles.module.css';
 
 export const Footer = () => {
@@ -10,7 +10,9 @@ export const Footer = () => {
           <NavLink to="/" className={styles.logo}>
             {LOGO_TEXT}
           </NavLink>
-          <p className={styles.copyright}>© 2026 Lilit Mkrtchyan. Available for Work</p>
+          <p
+            className={styles.copyright}
+          >{`© ${new Date().getFullYear()} ${FULL_NAME}. ${AVAILABILITY_STATUS}`}</p>
           <nav className={styles.nav} aria-label="Social links">
             {SOCIAL_LINKS.map(link => (
               <a

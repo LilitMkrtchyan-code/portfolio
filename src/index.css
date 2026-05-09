@@ -158,7 +158,7 @@ a {
 .markdownContent {
   color: var(--color-text-primary);
   font-family: var(--font-primary);
-  font-size: var(--fs-md);
+  font-size: var(--fs-base);
   line-height: var(--lh-relaxed);
 }
 
@@ -192,7 +192,7 @@ ol {
 }
 
 .markdownContent strong {
-  font-family: var(--font-accent);
+  font-family: var(--font-alt);
   color: var(--color-accent);
 }
 
