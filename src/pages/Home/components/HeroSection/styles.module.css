@@ -59,9 +59,9 @@
 
 .description {
   font-family: var(--font-primary);
-  font-size: 1.25rem;
+  font-size: var(--fs-md);
   font-weight: 400;
-  line-height: var(--lh-base);
+  line-height: var(--lh-relaxed);
   color: var(--color-text-secondary);
   margin-bottom: var(--space-12);
   max-width: 50ch;
@@ -156,4 +156,77 @@
 .profileContainer {
   width: 100%;
   aspect-ratio: 4 / 5;
+}
+
+@media (max-width: 1024px) {
+  .heroInner {
+    grid-template-columns: 1fr;
+    gap: var(--space-10);
+    text-align: center;
+  }
+
+  .content {
+    max-width: 100%;
+    order: 2;
+    align-items: center;
+  }
+
+  .imageWrapper {
+    order: 1;
+    margin: 0 auto;
+  }
+
+  .nameRow {
+    justify-content: center;
+  }
+
+  .line {
+    display: none;
+  }
+
+  .description {
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  .tags {
+    justify-content: center;
+    flex-wrap: wrap;
+  }
+}
+
+@media (max-width: 768px) {
+  .hero {
+    padding-top: calc(var(--space-section) + var(--space-8));
+    min-height: auto;
+  }
+
+  .name {
+    font-size: var(--fs-md);
+  }
+
+  .title {
+    font-size: var(--fs-xxl);
+  }
+
+  .imageWrapper {
+    max-width: 360px;
+  }
+}
+
+@media (max-width: 480px) {
+  .imageWrapper {
+    max-width: 320px;
+  }
+
+  .actions {
+    flex-direction: column;
+    width: 100%;
+    gap: var(--space-4);
+  }
+
+  .cvButton,
+  .aiButton {
+    width: 100%;
+  }
 }

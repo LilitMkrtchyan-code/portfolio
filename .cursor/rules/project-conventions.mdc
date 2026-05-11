@@ -12,6 +12,9 @@ alwaysApply: true
 - **Core Principles:**
   - Keep code simple (KISS), readable, and maintainable. Avoid duplication (DRY) and unnecessary abstractions.
 
+- **Communication Language:**
+  - Always respond to me in Russian. This applies only to the explanatory text. All code and technical terms must remain in English.
+
 - **Cross-file rules:**
   - Component/TypeScript specifics live in `component-patterns.mdc`.
   - Styling specifics live in `css-guidelines.mdc`.

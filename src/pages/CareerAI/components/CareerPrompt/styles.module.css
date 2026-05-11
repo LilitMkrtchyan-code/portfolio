@@ -13,7 +13,7 @@
   align-items: center;
   gap: var(--space-3);
   padding-bottom: var(--space-4);
-  border-bottom: 1px solid #312b36;
+  border-bottom: 1px solid var(--color-border-main);
 }
 
 .headerIcon {
@@ -44,7 +44,7 @@ textarea.promptText {
   padding: var(--space-6) 0;
   color: var(--color-text-primary);
   font-family: var(--font-primary);
-  font-size: var(--fs-md);
+  font-size: var(--fs-base);
   line-height: var(--lh-loose);
   letter-spacing: var(--ls-normal);
   background: transparent;

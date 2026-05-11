@@ -1,6 +1,6 @@
-import type { HeaderLink } from './types';
+import type { HeaderNavLink } from './types';
 
-export const HEADER_LINKS: HeaderLink[] = [
+export const HEADER_NAV_LINKS: HeaderNavLink[] = [
   { label: 'Home', to: '/' },
   { label: 'Projects', to: '/projects' },
   { label: 'Process', to: '/process' },

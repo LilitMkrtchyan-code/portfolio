@@ -4,6 +4,10 @@
   background-color: var(--color-bg-deep);
 }
 
+.inner {
+  padding: 0 var(--space-4);
+}
+
 .cards {
   display: grid;
   grid-template-columns: repeat(3, 1fr);

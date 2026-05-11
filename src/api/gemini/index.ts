@@ -22,11 +22,18 @@ export const generateGeminiContent = async (prompt: string): Promise<string> => 
       params: { key: API_KEY },
       headers: { 'Content-Type': 'application/json' },
     });
-    return response.data.candidates?.[0]?.content?.parts?.[0]?.text || '';
+    const text = response.data.candidates?.[0]?.content?.parts?.[0]?.text;
+
+    if (!text) {
+      throw new Error('Gemini API returned an empty or invalid response structure');
+    }
+    return text;
   } catch (error) {
     const axiosError = error as AxiosError<{ error: { message: string } }>;
-    const errorMessage = axiosError.response?.data?.error?.message || 'Something went wrong';
-
+    const errorMessage =
+      axiosError.response?.data?.error?.message ||
+      (error as Error).message ||
+      'Something went wrong';
     console.error('Gemini API Error:', errorMessage);
     throw new Error(errorMessage);
   }

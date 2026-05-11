@@ -7,15 +7,17 @@ const PhilosophySection = () => {
   return (
     <section className={styles.philosophy}>
       <div className="container">
-        <SectionHeader
-          title="Engineering Mindset"
-          subtitle="Philosophy"
-          description={DESCRIPTION}
-        />
-        <div className={styles.cards}>
-          {PHILOSOPHY_CARDS.map(card => (
-            <PhilosophyCard key={card.id} {...card} />
-          ))}
+        <div className={styles.inner}>
+          <SectionHeader
+            title="Engineering Mindset"
+            subtitle="Philosophy"
+            description={DESCRIPTION}
+          />
+          <div className={styles.cards}>
+            {PHILOSOPHY_CARDS.map(card => (
+              <PhilosophyCard key={card.id} {...card} />
+            ))}
+          </div>
         </div>
       </div>
     </section>

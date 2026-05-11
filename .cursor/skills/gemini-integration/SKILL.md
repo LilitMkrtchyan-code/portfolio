@@ -47,7 +47,7 @@ const payload = {
 - Response text:
 
 ```ts
-return response.data.candidates?.[0]?.content?.parts?.[0]?.text || '';
+return response.data.candidates?.[0]?.content?.parts?.[0]?.text;
 ```
 
 ## Error Handling
