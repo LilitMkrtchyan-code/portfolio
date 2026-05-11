@@ -1,0 +1,47 @@
+.mobileDrawer :global(.ant-drawer-header) {
+  background: var(--color-bg-main);
+  border-bottom: 1px solid var(--color-border-main);
+  padding: var(--space-7) var(--space-6);
+}
+
+.mobileDrawer :global(.ant-drawer-title) {
+  font-family: var(--font-alt);
+  font-weight: 700;
+  font-size: var(--fs-md);
+  letter-spacing: var(--ls-wide);
+  line-height: var(--lh-nav);
+  color: var(--color-accent);
+  text-transform: uppercase;
+}
+
+.mobileDrawer :global(.ant-drawer-body) {
+  background: var(--color-bg-main);
+  padding: var(--space-6);
+}
+
+.closeButton {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--color-text-secondary);
+  padding: var(--space-2);
+  background-color: var(--color-bg-elevated);
+  border-radius: var(--radius-md);
+  opacity: var(--op-lg);
+  transition:
+    color var(--t-base) var(--ease-gentle),
+    opacity var(--t-base) var(--ease-gentle),
+    background-color var(--t-base) var(--ease-gentle);
+  cursor: pointer;
+}
+
+.closeButton:hover {
+  color: var(--color-accent);
+  background-color: var(--color-bg-light);
+  opacity: 1;
+}
+
+.drawerContent {
+  display: flex;
+  flex-direction: column;
+}

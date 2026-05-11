@@ -2,12 +2,12 @@
   position: relative;
   width: 100%;
   background-color: var(--color-bg-main);
-  padding: var(--space-13) 0;
+  padding: var(--space-10) 0;
   overflow: hidden;
 }
 
 .inner {
-  padding: var(--space-8) 0;
+  padding: var(--space-7) 0;
   background-color: transparent;
   overflow: hidden;
   backdrop-filter: blur(12px);

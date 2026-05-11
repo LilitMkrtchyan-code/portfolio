@@ -44,3 +44,9 @@
     padding-top: var(--space-4);
   }
 }
+
+@media (max-width: 768px) {
+  .title {
+    font-size: var(--fs-xxl);
+  }
+}

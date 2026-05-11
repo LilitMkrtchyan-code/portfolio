@@ -9,6 +9,7 @@
   --fs-md: 1.125rem;
   --fs-lg: 1.5rem;
   --fs-xl: 1.875rem;
+  --fs-xxl: 2.6rem;
   --fs-display: 3.75rem;
 
   --lh-none: 1;
@@ -44,15 +45,23 @@
 
   --color-black: #000000;
   --color-overlay-soft: #554339;
+  --color-indicator-success: #4ade80;
+
+  --color-border-main: #312b36;
   --color-border-soft: #17151e;
   --color-border-muted: #48454d;
-  --color-indicator-success: #4ade80;
 
   --color-accent-subtle: rgba(255, 182, 139, 0.05);
   --color-accent-glow: rgba(255, 182, 139, 0.14);
 
   --color-surface-ghost: rgb(54 51 61 / 0.3);
   --color-surface-glass: rgb(54 51 61 / 0.9);
+
+  --gradient-primary: linear-gradient(
+    135deg,
+    var(--color-accent) 10%,
+    var(--color-accent-strong) 90%
+  );
 
   --ease-gentle: cubic-bezier(0.4, 0, 0.2, 1);
   --ease-visual: cubic-bezier(0.22, 1, 0.36, 1);
@@ -91,8 +100,6 @@
   --op-md: 0.6;
   --op-lg: 0.8;
 }
-
-/*   background-color: #211e28 ; */
 
 *,
 *::before,
@@ -196,6 +203,12 @@ ol {
   color: var(--color-accent);
 }
 
+@media (max-width: 1024px) {
+  html {
+    font-size: 93.75%;
+  }
+}
+
 @media (max-width: 768px) {
   html {
     font-size: 90%;
@@ -204,6 +217,6 @@ ol {
 
 @media (max-width: 480px) {
   html {
-    font-size: 85%;
+    font-size: 90%;
   }
 }

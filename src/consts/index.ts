@@ -13,6 +13,5 @@ export const HERO_IMAGE_URL =
 export const SOCIAL_LINKS: SocialLink[] = [
   { label: 'Github', href: 'https://github.com/LilitMkrtchyan-code' },
   { label: 'Read.cv', href: 'https://read.cv' },
-  { label: 'Instagram', href: 'https://instagram.com' },
   { label: 'Linkedin', href: 'https://www.linkedin.com/in/lilit-mkrtchyan-lmk' },
 ];
