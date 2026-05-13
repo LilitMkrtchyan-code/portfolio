@@ -1,3 +1,12 @@
+.pageTitle {
+  font-family: var(--font-alt);
+  font-size: var(--fs-display-xl);
+  font-weight: 700;
+  line-height: var(--lh-none);
+  letter-spacing: var(--ls-tight-max);
+  color: var(--color-text-primary);
+}
+
 .sectionTitle {
   font-family: var(--font-alt);
   font-size: var(--fs-display);

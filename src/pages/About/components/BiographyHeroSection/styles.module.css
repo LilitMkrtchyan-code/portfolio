@@ -1,0 +1,123 @@
+.biography {
+  width: 100%;
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  padding: var(--space-section) 0 var(--space-12);
+  background-color: var(--color-bg-main);
+}
+
+.inner {
+  width: 100%;
+  display: grid;
+  grid-template-columns: minmax(0, 1.3fr) minmax(280px, 400px);
+  align-items: center;
+  gap: var(--space-12);
+  padding: 0 var(--space-8);
+}
+
+.content {
+  max-width: 700px;
+}
+
+.subtitle {
+  margin-bottom: var(--space-8);
+}
+
+.title {
+  margin-bottom: var(--space-10);
+}
+
+.titleLine {
+  display: block;
+  line-height: 1.1;
+}
+
+.lineClean {
+  color: var(--color-text-primary);
+  font-weight: 700;
+}
+
+.lineLogic {
+  color: var(--color-text-secondary);
+  font-style: italic;
+  font-weight: 400;
+  text-transform: capitalize;
+}
+
+.lineUi {
+  color: var(--color-accent);
+  font-weight: 700;
+}
+
+.description {
+  font-family: var(--font-primary);
+  font-size: var(--fs-md);
+  font-weight: 400;
+  line-height: var(--lh-relaxed);
+  color: var(--color-text-secondary);
+  padding: var(--space-2) 0 var(--space-2) var(--space-8);
+  border-left: 2px solid var(--color-accent-glow);
+  max-width: 50ch;
+}
+
+.imageWrapper {
+  width: 100%;
+  padding: var(--space-2);
+  border: 1px solid var(--color-surface-warm);
+  border-radius: var(--radius-xl);
+  background-color: var(--color-bg-main);
+  transition: border-color var(--t-base) var(--ease-gentle);
+}
+
+.imageWrapper:hover {
+  border-color: var(--color-overlay-medium);
+}
+
+.imageInner {
+  border-radius: var(--radius-md);
+  border: 1px solid var(--color-surface-warm);
+  padding: var(--space-2);
+}
+
+.profileContainer {
+  width: 100%;
+  border-radius: var(--radius-md);
+  aspect-ratio: 4 / 5;
+}
+
+@media (max-width: 1024px) {
+  .inner {
+    grid-template-columns: 1fr;
+    gap: var(--space-10);
+  }
+
+  .content {
+    max-width: 100%;
+    order: 2;
+  }
+
+  .title {
+    max-width: 100%;
+  }
+
+  .description {
+    max-width: 100%;
+  }
+
+  .imageWrapper {
+    max-width: 380px;
+    margin: 0 auto;
+    order: 1;
+  }
+}
+
+@media (max-width: 768px) {
+  .biography {
+    padding-top: calc(var(--space-section) + var(--space-6));
+  }
+
+  .title {
+    font-size: var(--fs-xxl);
+  }
+}
