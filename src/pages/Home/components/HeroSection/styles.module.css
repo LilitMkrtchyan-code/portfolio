@@ -10,7 +10,7 @@
 .heroInner {
   width: 100%;
   display: grid;
-  grid-template-columns: 1.2fr 1fr;
+  grid-template-columns: minmax(0, 1.3fr) minmax(280px, 400px);
   align-items: center;
   gap: var(--space-12);
   padding: 0 var(--space-8);
@@ -145,10 +145,9 @@
 
 .imageWrapper {
   width: 100%;
-  max-width: 400px;
   margin-left: auto;
   padding: var(--space-2);
-  border: 1px solid #2c2326;
+  border: 1px solid var(--color-surface-warm);
   border-radius: var(--radius-4xl);
   background-color: var(--color-bg-main);
 }
@@ -172,6 +171,7 @@
   }
 
   .imageWrapper {
+    max-width: 380px;
     order: 1;
     margin: 0 auto;
   }

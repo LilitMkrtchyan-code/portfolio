@@ -2,12 +2,7 @@ import type { ProfileImageProps } from './types';
 import { getProfileImageClassName } from './utils';
 import styles from './styles.module.css';
 
-export const ProfileImage = ({
-  src,
-  alt,
-  className = '',
-  withHover = false,
-}: ProfileImageProps) => {
+export const BaseImage = ({ src, alt, className = '', withHover = false }: ProfileImageProps) => {
   const fullClassName = getProfileImageClassName(withHover, className);
 
   return (
@@ -18,4 +13,4 @@ export const ProfileImage = ({
   );
 };
 
-export default ProfileImage;
+export default BaseImage;

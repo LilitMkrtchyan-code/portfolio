@@ -1,4 +1,4 @@
-import ProfileImage from '../../../../components/shared/ProfileImage';
+import BaseImage from '../../../../components/shared/BaseImage';
 import { HERO_IMAGE_URL } from '../../../../consts';
 import Heading from '../../../../components/shared/Heading';
 import { VIRTUAL_SELF_DESCRIPTION } from './consts';
@@ -13,7 +13,7 @@ const VirtualSelfSection = () => {
         <div className={styles.inner}>
           <div className={styles.avatarScene}>
             <div className={styles.imageWrapper}>
-              <ProfileImage
+              <BaseImage
                 src={HERO_IMAGE_URL}
                 alt="AI Avatar"
                 className={styles.profileContainer}
