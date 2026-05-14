@@ -215,6 +215,10 @@
 }
 
 @media (max-width: 480px) {
+  .heroInner {
+    padding: 0 var(--space-4);
+  }
+
   .imageWrapper {
     max-width: 320px;
   }

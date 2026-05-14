@@ -125,3 +125,9 @@
     font-size: var(--fs-xxl);
   }
 }
+
+@media (max-width: 480px) {
+  .inner {
+    padding: 0 var(--space-4);
+  }
+}

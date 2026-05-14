@@ -109,7 +109,7 @@
   --space-10: 2.5rem;
   --space-12: 3rem;
   --space-13: 5rem;
-  --space-section: 8rem;
+  --space-section: clamp(4rem, 10vw, 8rem);
 
   /*  opacity */
   --op-xs: 0.1;
