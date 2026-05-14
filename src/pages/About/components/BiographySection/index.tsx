@@ -1,10 +1,10 @@
 import Heading from '../../../../components/shared/Heading';
-import ProfileImage from '../../../../components/shared/ProfileImage';
+import BaseImage from '../../../../components/shared/BaseImage';
 import { BIOGRAPHY_DESCRIPTION, BIOGRAPHY_SUBTITLE, BIOGRAPHY_TITLE_LINES } from './consts';
 import { FULL_NAME, HERO_IMAGE_URL } from '../../../../consts';
 import styles from './styles.module.css';
 
-const BiographyHeroSection = () => {
+const BiographySection = () => {
   return (
     <section className={styles.biography}>
       <div className="container">
@@ -25,7 +25,7 @@ const BiographyHeroSection = () => {
 
           <div className={styles.imageWrapper}>
             <div className={styles.imageInner}>
-              <ProfileImage
+              <BaseImage
                 src={HERO_IMAGE_URL}
                 alt={FULL_NAME}
                 withHover={true}
@@ -39,4 +39,4 @@ const BiographyHeroSection = () => {
   );
 };
 
-export default BiographyHeroSection;
+export default BiographySection;

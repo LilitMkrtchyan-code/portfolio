@@ -1,6 +1,6 @@
 import Heading from '../../../../components/shared/Heading';
 import BaseButton from '../../../../components/shared/BaseButton';
-import ProfileImage from '../../../../components/shared/ProfileImage';
+import BaseImage from '../../../../components/shared/BaseImage';
 import { CV_PATH, FULL_NAME, HERO_IMAGE_URL, JOB_TITLE } from '../../../../consts';
 import { HERO_DESCRIPTION, HERO_TAGS } from './consts';
 import styles from './styles.module.css';
@@ -37,7 +37,7 @@ const HeroSection = () => {
             </div>
           </div>
           <div className={styles.imageWrapper}>
-            <ProfileImage
+            <BaseImage
               src={HERO_IMAGE_URL}
               alt={FULL_NAME}
               className={styles.profileContainer}
