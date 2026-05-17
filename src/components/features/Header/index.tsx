@@ -1,7 +1,7 @@
 import { useToggle } from '../../../hooks/useToggle';
 import { Grid } from 'antd';
 import { NavLink } from 'react-router-dom';
-import { FULL_NAME, LOGO_TEXT } from '../../../consts';
+import { FULL_NAME } from '../../../consts';
 import BaseButton from '../../shared/BaseButton';
 import { Menu } from 'lucide-react';
 import MobileDrawer from '../../shared/MobileDrawer';
@@ -42,7 +42,7 @@ export const Header = () => {
           <MobileDrawer
             isOpen={isVisible}
             onClose={hide}
-            title={LOGO_TEXT}
+            title={FULL_NAME}
             placement="left"
             size={350}
             closeBtnClassName={styles.closeButton}

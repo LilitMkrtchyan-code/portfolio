@@ -1,28 +1,28 @@
-import type { CareerInputProps } from './types';
+import type { PromptInputProps } from './types';
 import { Input } from 'antd';
 import { Terminal } from 'lucide-react';
-import { CV_PLACEHOLDER } from './consts';
+import { ASK_ME_TEXTS } from './consts';
 import BaseButton from '../../../../components/shared/BaseButton';
 import { MODEL_ID } from '../../../../api/gemini/config';
 import styles from './styles.module.css';
 
 const { TextArea } = Input;
 
-const CareerPrompt = ({ value, onChange, onGenerate, onClear, isLoading }: CareerInputProps) => {
+const PromptInput = ({ userQuestion, onChange, onAsk, onClear, isThinking }: PromptInputProps) => {
   return (
-    <div className={styles.careerPrompt}>
+    <div className={styles.promptInput}>
       <div className={styles.promptHeader}>
         <div className={styles.headerIcon}>
-          <Terminal size={16} strokeWidth={3} />
+          <Terminal size={20} strokeWidth={2} />
         </div>
-        <span className={styles.headerTitle}>Career Prompt</span>
+        <span className={styles.headerTitle}>{ASK_ME_TEXTS.headerTitle}</span>
       </div>
 
       <div className={styles.promptField}>
         <TextArea
-          value={value}
+          value={userQuestion}
           onChange={e => onChange(e.target.value)}
-          placeholder={CV_PLACEHOLDER}
+          placeholder={ASK_ME_TEXTS.inputPlaceholder}
           autoSize={{ minRows: 4, maxRows: 10 }}
           variant="borderless"
           className={styles.promptText}
@@ -33,24 +33,25 @@ const CareerPrompt = ({ value, onChange, onGenerate, onClear, isLoading }: Caree
         <div className={styles.buttonGroup}>
           <BaseButton
             variant="primary"
-            onClick={onGenerate}
-            className={styles.btnGenerate}
-            disabled={isLoading}
+            onClick={onAsk}
+            className={styles.btnAsk}
+            disabled={isThinking}
           >
-            {isLoading ? 'Processing' : 'Ask Career'}
+            {isThinking ? ASK_ME_TEXTS.btnProcessing : ASK_ME_TEXTS.btnAsk}
           </BaseButton>
-          <BaseButton variant="secondary" className={styles.btnClear} onClick={onClear}>
-            Clear Space
+          <BaseButton
+            variant="secondary"
+            className={styles.btnClear}
+            onClick={onClear}
+            disabled={isThinking}
+          >
+            {ASK_ME_TEXTS.btnClear}
           </BaseButton>
         </div>
 
         <div className={styles.metaInfo}>
           <div className={styles.metaItem}>
-            <span className={styles.metaLabel}>Latency</span>
-            <span className={styles.metaValue}>24ms</span>
-          </div>
-          <div className={styles.metaItem}>
-            <span className={styles.metaLabel}>Model</span>
+            <span className={styles.metaLabel}>{ASK_ME_TEXTS.metaModelLabel}</span>
             <span className={styles.metaValue}>{MODEL_ID}</span>
           </div>
         </div>
@@ -59,4 +60,4 @@ const CareerPrompt = ({ value, onChange, onGenerate, onClear, isLoading }: Caree
   );
 };
 
-export default CareerPrompt;
+export default PromptInput;

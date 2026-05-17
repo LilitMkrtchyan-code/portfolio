@@ -5,6 +5,6 @@ export const HEADER_NAV_LINKS: HeaderNavLink[] = [
   { label: 'Projects', to: '/projects' },
   { label: 'Process', to: '/process' },
   { label: 'About', to: '/about' },
-  { label: 'CareerAI', to: '/careerAI' },
+  { label: 'Ask Me', to: '/askMe' },
   { label: 'Contact', to: '/contact' },
 ];
