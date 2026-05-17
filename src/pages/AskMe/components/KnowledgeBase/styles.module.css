@@ -1,4 +1,4 @@
-.cvEssentials {
+.knowledgeBase {
   background-color: var(--color-bg-elevated);
   padding: var(--space-6);
   border-radius: var(--radius-lg);
@@ -6,23 +6,24 @@
 }
 
 .title {
-  color: var(--color-text-secondary);
+  color: var(--color-accent);
   margin-bottom: var(--space-6);
   text-transform: uppercase;
 }
 
-.essentialsList {
+.knowledgeList {
   display: flex;
   flex-direction: column;
   gap: var(--space-4);
 }
 
-.essentialItem {
+.knowledgeItem {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  background-color: #1d1a23;
+  background-color: var(--color-bg-light);
   border-radius: var(--radius-xs);
+  border: 1px solid transparent;
   padding: var(--space-3);
 }
 
@@ -36,28 +37,47 @@
 }
 
 .itemStatus {
-  display: inline-block;
+  display: flex;
+  align-items: center;
+  gap: var(--space-1);
   font-family: var(--font-accent);
   font-size: var(--fs-sm);
   letter-spacing: var(--ls-normal);
   line-height: var(--lh-nav);
-  font-weight: 700;
-  color: var(--color-accent);
+  font-weight: 500;
+  color: var(--color-text-secondary);
+  opacity: var(--op-sm);
   text-transform: uppercase;
 }
 
-.required {
-  color: var(--color-accent);
-}
-
-.missing {
-  color: var(--color-surface-glass);
+.active {
+  background-color: var(--color-bg-surface);
+  border-color: var(--color-accent);
+  transform: translateX(5px);
 }
 
 .ready {
   color: var(--color-indicator-success);
+  opacity: 1;
 }
 
-.optional {
-  color: var(--color-surface-glass);
+@media (max-width: 768px) {
+  .knowledgeBase {
+    padding: var(--space-5);
+  }
+
+  .active {
+    transform: none;
+    border-color: var(--color-accent);
+  }
+}
+
+@media (max-width: 480px) {
+  .knowledgeList {
+    gap: var(--space-2);
+  }
+
+  .knowledgeItem {
+    padding: var(--space-3) var(--space-2);
+  }
 }

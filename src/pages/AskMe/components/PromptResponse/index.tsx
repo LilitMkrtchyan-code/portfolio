@@ -1,35 +1,36 @@
+import type { PromptResponseProps } from './types';
 import { Sparkles, Download } from 'lucide-react';
 import ReactMarkdown from 'react-markdown';
 import BaseButton from '../../../../components/shared/BaseButton';
-import type { CareerResponseProps } from './types';
+import { RESPONSE_TEXTS } from './consts';
 import styles from './styles.module.css';
 
-const CareerResponse = ({ aiResponse, isLoading, onSave, onDownload }: CareerResponseProps) => {
+const PromptResponse = ({ myResponse, isThinking, onSave, onDownload }: PromptResponseProps) => {
   return (
-    <div className={styles.careerResponse}>
+    <div className={styles.promptResponse}>
       <div className={styles.responseHeader}>
         <div className={styles.headerLeft}>
           <div className={styles.headerIcon}>
-            <Sparkles size={16} strokeWidth={3} />
+            <Sparkles size={20} strokeWidth={2} />
           </div>
-          <span className={styles.headerTitle}>Career Response</span>
+          <span className={styles.headerTitle}>{RESPONSE_TEXTS.responseTitle}</span>
         </div>
       </div>
 
       <div className={styles.responseField}>
-        {isLoading ? (
-          <div className={styles.loadingState}>Gemini is crafting your career path...</div>
+        {isThinking ? (
+          <div className={styles.loadingState}>{RESPONSE_TEXTS.loadingText}</div>
         ) : (
           <div className="markdownContent">
-            <ReactMarkdown>{aiResponse}</ReactMarkdown>
+            <ReactMarkdown>{myResponse}</ReactMarkdown>
           </div>
         )}
       </div>
 
-      {!isLoading && aiResponse && (
+      {!isThinking && myResponse && (
         <div className={styles.responseFooter}>
           <BaseButton variant="secondary" onClick={onSave} className={styles.btnSave}>
-            <span>Save Response</span>
+            <span>{RESPONSE_TEXTS.btnSave}</span>
           </BaseButton>
           <BaseButton variant="secondary" onClick={onDownload} className={styles.btnDownload}>
             <Download size={22} strokeWidth={2} />
@@ -40,4 +41,4 @@ const CareerResponse = ({ aiResponse, isLoading, onSave, onDownload }: CareerRes
   );
 };
 
-export default CareerResponse;
+export default PromptResponse;

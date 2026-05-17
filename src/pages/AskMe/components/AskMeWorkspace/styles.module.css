@@ -1,8 +1,14 @@
-.careerWorkspace {
+.askMeWorkspace {
   display: grid;
   grid-template-columns: 2fr 1fr;
   gap: var(--space-8);
   max-width: 1000px;
   margin: var(--space-8) auto 0;
   align-items: start;
+}
+
+@media (max-width: 768px) {
+  .askMeWorkspace {
+    grid-template-columns: 1fr;
+  }
 }

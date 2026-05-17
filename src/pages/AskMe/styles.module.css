@@ -1,0 +1,40 @@
+.askMe {
+  width: 100%;
+  background-color: var(--color-bg-main);
+  padding: calc(var(--header-height, 2.6rem) + var(--space-page)) var(--space-4) 0;
+  min-height: calc(100vh - var(--header-height, 2.6rem));
+  display: flex;
+  align-items: center;
+  background-color: var(--color-bg-main);
+}
+
+.askMe .askMeContainer {
+  max-width: 1000px;
+  display: flex;
+  flex-direction: column;
+}
+
+.heroTitle {
+  line-height: 1.1;
+  padding-bottom: var(--space-12);
+}
+
+.accentText {
+  color: var(--color-accent);
+}
+
+@media (max-width: 768px) {
+  .askMe {
+    align-items: flex-start;
+  }
+
+  .heroTitle {
+    font-size: var(--fs-display);
+  }
+}
+
+@media (max-width: 480px) {
+  .heroTitle {
+    font-size: var(--fs-xxl);
+  }
+}

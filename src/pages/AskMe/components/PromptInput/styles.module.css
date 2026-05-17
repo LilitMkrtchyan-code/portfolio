@@ -1,6 +1,6 @@
-.careerPrompt {
+.promptInput {
   background-color: var(--color-bg-elevated);
-  border: 1px solid #252129;
+  border: 1px solid var(--color-surface-warm);
   border-radius: var(--radius-lg);
   padding: var(--space-8);
   width: 100%;
@@ -13,15 +13,18 @@
   align-items: center;
   gap: var(--space-3);
   padding-bottom: var(--space-4);
-  border-bottom: 1px solid var(--color-border-main);
+  border-bottom: 1px solid var(--color-surface-warm);
 }
 
 .headerIcon {
-  background-color: var(--color-accent-subtle);
+  width: 38px;
+  height: 38px;
+  background-color: transparent;
+  border: 1px solid var(--color-border-main);
+  border-radius: var(--radius-md);
   color: var(--color-accent);
-  padding: var(--space-2);
-  border-radius: var(--radius-sm);
   display: flex;
+  justify-content: center;
   align-items: center;
 }
 
@@ -36,31 +39,28 @@
   text-transform: uppercase;
 }
 
-textarea {
-  background-color: #211e28 !important;
-}
-
-textarea.promptText {
+.promptField :global(.ant-input) {
   padding: var(--space-6) 0;
   color: var(--color-text-primary);
   font-family: var(--font-primary);
   font-size: var(--fs-base);
   line-height: var(--lh-loose);
   letter-spacing: var(--ls-normal);
-  background: transparent;
+  background: var(--color-bg-elevated);
   box-shadow: none;
   resize: none;
 }
 
-.promptText::placeholder {
+.promptField :global(.ant-input)::placeholder {
   color: var(--color-text-secondary);
-  opacity: 0.2;
+  opacity: var(--op-md);
 }
 
 .promptFooter {
   display: flex;
   justify-content: space-between;
   align-items: center;
+  gap: var(--space-6);
   padding-top: var(--space-6);
 }
 
@@ -69,19 +69,21 @@ textarea.promptText {
   gap: var(--space-4);
 }
 
-.btnGenerate,
+.btnAsk,
 .btnClear {
-  padding: var(--space-2) var(--space-10);
   border-radius: var(--radius-lg);
+  min-width: 9rem;
+  padding: var(--space-2) var(--space-6);
 }
 
-.btnGenerate:disabled {
-  opacity: 0.5;
+.btnAsk:disabled {
+  opacity: var(--op-md);
   cursor: not-allowed;
 }
 
 .btnClear {
   font-weight: 400;
+  background-color: var(--color-bg-surface);
 }
 
 .metaInfo {
@@ -93,11 +95,12 @@ textarea.promptText {
   display: flex;
   flex-direction: column;
   align-items: flex-end;
+  gap: var(--space-1);
 }
 
 .metaLabel {
   font-family: var(--font-accent);
-  font-size: 10px;
+  font-size: var(--fs-xs);
   letter-spacing: var(--ls-normal);
   line-height: var(--lh-relaxed);
   color: var(--color-text-secondary);
@@ -108,9 +111,44 @@ textarea.promptText {
 .metaValue {
   font-family: var(--font-accent);
   font-size: var(--fs-sm);
-  letter-spacing: var(--ls-normal);
+  letter-spacing: var(--ls-md);
   line-height: var(--lh-nav);
   color: var(--color-text-secondary);
   font-weight: 700;
-  margin-top: 2px;
+  text-transform: capitalize;
+}
+
+@media (max-width: 768px) {
+  .promptInput {
+    padding: var(--space-5);
+  }
+
+  .promptFooter {
+    flex-direction: column;
+    align-items: stretch;
+  }
+
+  .buttonGroup {
+    order: 2;
+  }
+
+  .metaInfo {
+    justify-content: flex-end;
+    gap: var(--space-6);
+    order: 1;
+  }
+}
+
+@media (max-width: 480px) {
+  .buttonGroup {
+    flex-direction: column;
+    gap: var(--space-3);
+  }
+
+  .btnAsk,
+  .btnClear {
+    flex: 1;
+    min-width: unset;
+    width: 100%;
+  }
 }

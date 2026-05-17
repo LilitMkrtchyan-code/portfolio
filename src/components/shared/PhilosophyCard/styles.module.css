@@ -2,7 +2,7 @@
   background-color: var(--color-bg-main);
   padding: var(--space-10);
   border-radius: var(--radius-3xl);
-  border: 1px solid transparent;
+  border: 1px solid var(--color-surface-warm);
   transition:
     border-color var(--t-base) var(--ease-visual),
     background-color var(--t-base) var(--ease-visual);
@@ -14,10 +14,10 @@
   display: flex;
   align-items: center;
   justify-content: center;
-  background-color: var(--color-accent-subtle);
+  background-color: transparent;
   border-radius: var(--radius-md);
   margin-bottom: var(--space-12);
-  border: 1px solid var(--color-accent-subtle);
+  border: 1px solid var(--color-border-main);
 }
 
 .icon {
@@ -36,7 +36,7 @@
 
 .cardDescription {
   font-family: var(--font-primary);
-  font-size: var(--fs-base);
+  font-size: var(--fs-md);
   font-weight: 400;
   line-height: var(--lh-relaxed);
   letter-spacing: var(--ls-md);

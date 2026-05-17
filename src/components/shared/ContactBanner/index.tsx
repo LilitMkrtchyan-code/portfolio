@@ -1,4 +1,6 @@
 import type { ReactNode } from 'react';
+import type { ContactBannerProps } from './types';
+import { ContactBannerClassName } from './utils';
 import BaseButton from '../../../components/shared/BaseButton';
 import Heading from '../Heading';
 
@@ -18,9 +20,9 @@ const CONTACT_TITLE: ReactNode = (
   </>
 );
 
-const ContactBanner = () => {
+const ContactBanner = ({ className }: ContactBannerProps) => {
   return (
-    <section className={styles.contactBanner}>
+    <section className={ContactBannerClassName(className)}>
       <div className="container">
         <div className={styles.inner}>
           <Heading as="h2" variant="sectionTitle" className={styles.contactTitle}>

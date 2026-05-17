@@ -1,7 +1,7 @@
 .contactBanner {
   width: 100%;
-  padding: var(--space-section) 0;
   background-color: var(--color-bg-main);
+  padding: var(--space-section) 0;
 }
 
 .inner {

@@ -110,6 +110,9 @@
   --space-12: 3rem;
   --space-13: 5rem;
   --space-section: clamp(4rem, 10vw, 8rem);
+  --space-page: 8rem;
+
+  --header-height: 2.6rem;
 
   /*  opacity */
   --op-xs: 0.1;
