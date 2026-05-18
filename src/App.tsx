@@ -2,7 +2,6 @@ import { Route, Routes } from 'react-router-dom';
 import MainLayout from './components/layout/MainLayout';
 import Home from './pages/Home';
 import Projects from './pages/Projects';
-import Process from './pages/Process';
 import About from './pages/About';
 import AskMe from './pages/AskMe';
 import Contact from './pages/Contact';
@@ -13,7 +12,6 @@ const App = () => {
       <Route element={<MainLayout />}>
         <Route path="/" element={<Home />} />
         <Route path="/projects" element={<Projects />} />
-        <Route path="/process" element={<Process />} />
         <Route path="/about" element={<About />} />
         <Route path="/askMe" element={<AskMe />} />
         <Route path="/contact" element={<Contact />} />

@@ -8,10 +8,14 @@ const DEFAULT_TAG: Record<HeadingVariant, HeadingTag> = {
   subtitle: 'span',
 };
 
-const Heading = ({ as, variant = 'cardTitle', children, className }: HeadingProps) => {
+const Heading = ({ id = '', as, variant = 'cardTitle', children, className }: HeadingProps) => {
   const Component = as ?? DEFAULT_TAG[variant];
 
-  return <Component className={getHeadingClassName(variant, className)}>{children}</Component>;
+  return (
+    <Component id={id} className={getHeadingClassName(variant, className)}>
+      {children}
+    </Component>
+  );
 };
 
 export default Heading;
