@@ -1,1 +1,64 @@
+.contactPage {
+  width: 100%;
+  min-height: calc(100vh - var(--header-height, 2.6rem));
+  background-color: var(--color-bg-main);
+  padding: calc(var(--header-height, 2.6rem) + var(--space-page)) var(--space-4)
+    var(--space-section);
+}
 
+.contentGrid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: var(--space-12);
+  width: 100%;
+  align-items: flex-start;
+}
+
+.hero {
+  max-width: 48ch;
+}
+
+.heroTitle {
+  margin-bottom: var(--space-8);
+}
+
+.accentText {
+  color: var(--color-accent);
+}
+
+.heroDescription {
+  font-family: var(--font-primary);
+  font-size: var(--fs-md);
+  font-weight: 400;
+  line-height: var(--lh-relaxed);
+  color: var(--color-text-secondary);
+}
+
+.leftColumn,
+.rightColumn {
+  display: flex;
+  flex-direction: column;
+}
+
+.leftColumn {
+  gap: var(--space-10);
+}
+
+@media (max-width: 1024px) {
+  .contentGrid {
+    grid-template-columns: 1fr;
+    gap: var(--space-12);
+  }
+}
+
+@media (max-width: 768px) {
+  .heroTitle {
+    font-size: var(--fs-display);
+  }
+}
+
+@media (max-width: 480px) {
+  .heroTitle {
+    font-size: var(--fs-xxl);
+  }
+}

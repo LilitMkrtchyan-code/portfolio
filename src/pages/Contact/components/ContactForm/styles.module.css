@@ -1,0 +1,117 @@
+.contactFormCard {
+  background-color: var(--color-bg-elevated);
+  border: 1px solid var(--color-surface-warm);
+  border-radius: var(--radius-lg);
+  padding: var(--space-10);
+  width: 100%;
+}
+
+.formTitle {
+  font-family: var(--font-alt);
+  font-size: var(--fs-lg);
+  font-weight: 700;
+  line-height: var(--lh-nav);
+  letter-spacing: var(--ls-normal);
+  margin-bottom: var(--space-10);
+  color: var(--color-text-primary);
+}
+
+.form :global(.ant-form-item) {
+  margin-bottom: var(--space-6);
+}
+
+.form :global(.ant-form-item-label > label) {
+  font-family: var(--font-accent);
+  font-size: var(--fs-xs);
+  font-weight: 400;
+  letter-spacing: var(--ls-wider);
+  line-height: var(--lh-nav);
+  color: var(--color-text-secondary);
+  text-transform: uppercase;
+  height: auto;
+}
+
+.form :global(.ant-form-item-label > label::after) {
+  display: none;
+}
+
+.form :global(.ant-input),
+.form :global(.ant-input-affix-wrapper),
+.form :global(textarea.ant-input) {
+  background-color: var(--color-bg-surface);
+  border: 1px solid var(--color-surface-warm);
+  border-radius: var(--radius-md);
+  color: var(--color-text-primary);
+  font-family: var(--font-primary);
+  font-size: var(--fs-base);
+  line-height: var(--lh-relaxed);
+  padding: var(--space-4) var(--space-5);
+  box-shadow: none;
+}
+
+.form :global(.ant-input:hover),
+.form :global(.ant-input:focus),
+.form :global(.ant-input-affix-wrapper:hover),
+.form :global(.ant-input-affix-wrapper-focused),
+.form :global(textarea.ant-input:hover),
+.form :global(textarea.ant-input:focus) {
+  border-color: var(--color-overlay-medium);
+  background-color: var(--color-bg-surface);
+  box-shadow: none;
+}
+
+.form :global(.ant-input::placeholder),
+.form :global(textarea.ant-input::placeholder) {
+  color: var(--color-text-secondary);
+  opacity: var(--op-sm);
+}
+
+.form :global(textarea.ant-input) {
+  height: 160px;
+  resize: none;
+}
+
+.nameRow {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: var(--space-3);
+}
+
+.submitButton {
+  margin-top: var(--space-4);
+  border-radius: var(--radius-lg);
+  min-width: 12rem;
+  padding: var(--space-3) var(--space-8);
+}
+
+.form :global(.ant-form-item-has-error .ant-input),
+.form :global(.ant-form-item-has-error .ant-input:hover),
+.form :global(.ant-form-item-has-error .ant-input:focus),
+.form :global(.ant-form-item-has-error textarea.ant-input),
+.form :global(.ant-form-item-has-error textarea.ant-input:hover),
+.form :global(.ant-form-item-has-error textarea.ant-input:focus) {
+  border-color: var(--color-accent-strong);
+  background-color: var(--color-bg-deep);
+}
+
+.form :global(.ant-form-item-explain-error) {
+  color: var(--color-accent-strong);
+  font-family: var(--font-primary);
+  font-size: var(--fs-xs);
+  margin-top: var(--space-1);
+}
+
+@media (max-width: 768px) {
+  .contactFormCard {
+    padding: var(--space-6);
+  }
+
+  .nameRow {
+    grid-template-columns: 1fr;
+  }
+
+  .submitButton {
+    width: 100%;
+    min-width: unset;
+  }
+}
