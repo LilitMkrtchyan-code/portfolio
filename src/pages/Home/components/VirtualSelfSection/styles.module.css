@@ -32,7 +32,7 @@
 .imageWrapper {
   position: relative;
   width: 100%;
-  max-width: 360px;
+  max-width: 380px;
   border: 1px solid var(--color-overlay-soft);
   border-radius: var(--radius-3xl);
   background-color: var(--color-bg-light);
@@ -63,15 +63,18 @@
   transform: scale(1.2);
 }
 
+/* .profileContainer {
+  width: 100%;
+  aspect-ratio: 1 / 1;
+  transition: filter var(--t-smooth) var(--ease-visual);
+} */
+
 .profileContainer {
   width: 100%;
   aspect-ratio: 1 / 1;
-  filter: grayscale(85%);
+  object-fit: cover;
   transition: filter var(--t-smooth) var(--ease-visual);
-}
-
-.imageWrapper:hover .profileContainer {
-  filter: grayscale(0%);
+  display: block;
 }
 
 .statusBadge {
