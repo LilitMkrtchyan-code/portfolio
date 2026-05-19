@@ -9,7 +9,7 @@ import { Zap } from 'lucide-react';
 import styles from './styles.module.css';
 
 const VirtualSelfSection = () => {
-  const videoRef = useRef(null);
+  const videoRef = useRef<HTMLVideoElement>(null);
 
   const handleStartDialogue = () => {
     if (videoRef.current) {
