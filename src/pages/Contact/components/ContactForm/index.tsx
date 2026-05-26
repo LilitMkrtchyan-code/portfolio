@@ -1,7 +1,7 @@
+import { useState } from 'react';
 import { Form, Input, message } from 'antd';
 import Heading from '../../../../components/shared/Heading';
 import BaseButton from '../../../../components/shared/BaseButton';
-import { EMAIL } from '../../../../consts';
 import {
   CONTACT_FORM_LABELS,
   CONTACT_FORM_MESSAGES,
@@ -10,22 +10,27 @@ import {
   CONTACT_FORM_TITLE,
 } from './consts';
 import type { ContactFormValues } from './types';
+import { sendTelegramMessage } from '../../../../api/telegram';
 import styles from './styles.module.css';
 
 const { TextArea } = Input;
 
 const ContactForm = () => {
   const [form] = Form.useForm<ContactFormValues>();
+  const [loading, setLoading] = useState(false);
 
-  const handleFinish = (values: ContactFormValues) => {
-    const subject = encodeURIComponent(`Portfolio contact from ${values.name}`);
-    const body = encodeURIComponent(
-      `Name: ${values.name}\nEmail: ${values.email}\n\n${values.message}`,
-    );
-
-    window.location.href = `mailto:${EMAIL}?subject=${subject}&body=${body}`;
-    message.success(CONTACT_FORM_MESSAGES.success);
-    form.resetFields();
+  const handleFinish = async (values: ContactFormValues) => {
+    setLoading(true);
+    try {
+      await sendTelegramMessage(values);
+      message.success(CONTACT_FORM_MESSAGES.success);
+      form.resetFields();
+    } catch (error) {
+      console.error('Telegram Error:', error);
+      message.error('Something went wrong, please try again.');
+    } finally {
+      setLoading(false);
+    }
   };
 
   return (
@@ -70,8 +75,13 @@ const ContactForm = () => {
           <TextArea placeholder={CONTACT_FORM_PLACEHOLDERS.message} rows={6} />
         </Form.Item>
 
-        <BaseButton variant="primary" type="submit" className={styles.submitButton}>
-          {CONTACT_FORM_SUBMIT_TEXT}
+        <BaseButton
+          variant="primary"
+          type="submit"
+          className={styles.submitButton}
+          disabled={loading}
+        >
+          {loading ? 'Sending' : CONTACT_FORM_SUBMIT_TEXT}
         </BaseButton>
       </Form>
     </section>

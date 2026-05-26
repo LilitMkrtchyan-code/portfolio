@@ -17,10 +17,8 @@ const Contact = () => {
               </Heading>
               <p className={styles.heroDescription}>{CONTACT_PAGE_DESCRIPTION}</p>
             </header>
-
             <DirectChannels />
           </div>
-
           <div className={styles.rightColumn}>
             <ContactForm />
           </div>

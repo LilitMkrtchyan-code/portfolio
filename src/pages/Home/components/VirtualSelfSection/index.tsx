@@ -1,37 +1,19 @@
-// import BaseImage from '../../../../components/shared/BaseImage';
-// import virtualMe from '../../../../assets/images/virtualMe.png';
-import { useRef } from 'react';
+import BaseImage from '../../../../components/shared/BaseImage';
+import virtualMe from '../../../../assets/images/virtualMe.png';
 import Heading from '../../../../components/shared/Heading';
-import profileVideo from '../../../../assets/videos/profileVideo.mp4';
 import { VIRTUAL_SELF_DESCRIPTION } from './consts';
 import BaseButton from '../../../../components/shared/BaseButton';
 import { Zap } from 'lucide-react';
 import styles from './styles.module.css';
 
 const VirtualSelfSection = () => {
-  const videoRef = useRef<HTMLVideoElement>(null);
-
-  const handleStartDialogue = () => {
-    if (videoRef.current) {
-      videoRef.current.play();
-    }
-  };
-
   return (
     <section className={styles.virtualSelf}>
       <div className="container">
         <div className={styles.inner}>
           <div className={styles.avatarScene}>
             <div className={styles.imageWrapper}>
-              {/* <BaseImage src={virtualMe} alt="AI Avatar" className={styles.profileContainer} /> */}
-              <video
-                src={profileVideo}
-                ref={videoRef}
-                className={styles.profileContainer}
-                autoPlay={false}
-                muted
-                playsInline
-              />
+              <BaseImage src={virtualMe} alt="AI Avatar" className={styles.profileContainer} />
             </div>
             <div className={styles.statusBadge}>
               <span className={styles.statusDot} />
@@ -56,11 +38,7 @@ const VirtualSelfSection = () => {
               <span className={styles.languages}>Available in 5+ Languages</span>
             </div>
 
-            <BaseButton
-              variant="primary"
-              className={styles.dialogButton}
-              onClick={handleStartDialogue}
-            >
+            <BaseButton variant="primary" className={styles.dialogButton}>
               <span>Start Dialogue</span>
               <Zap size={18} className={styles.lightning} />
             </BaseButton>

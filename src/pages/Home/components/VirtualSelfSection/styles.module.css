@@ -63,18 +63,10 @@
   transform: scale(1.2);
 }
 
-/* .profileContainer {
-  width: 100%;
-  aspect-ratio: 1 / 1;
-  transition: filter var(--t-smooth) var(--ease-visual);
-} */
-
 .profileContainer {
   width: 100%;
   aspect-ratio: 1 / 1;
-  object-fit: cover;
   transition: filter var(--t-smooth) var(--ease-visual);
-  display: block;
 }
 
 .statusBadge {
